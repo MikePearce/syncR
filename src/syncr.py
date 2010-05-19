@@ -1,4 +1,3 @@
-import os.path
 #!/usr/bin/python
 
 # @desc     This script will sync a local directory with a remote directory
@@ -8,7 +7,9 @@ import os.path
 # @since    18/05/2010
 
 # Grab some libraries
-import sys, os, glob, subprocess
+import sys
+import os
+import glob
 
 # Setup some stuff
 excludes        = ''
