@@ -1,0 +1,31 @@
+## SyncR
+
+Time Machine in my mac is great, it really is. However, all it does is back stuff
+up. I really wanted something that could sync my local music/video/photo libs
+with the stuff on my NAS. I looked for some software, but everything seemed
+overkill.
+
+Then I remembered that my Mac is a Unix machine and has rsync, huzzah! I also
+remembered that I needed to learn a wee bit of python - double huzzah.
+
+Now, some may think that writing a wrapper for rsync is a fools errand and well
+it might be, but it was a fun way to spend half hour.
+
+-- Usage
+Run it from the command line, or from a cron if you like.
+%> ./syncr  - This will show you usage optiosn
+%> ./syncr [source] [destination] [deleteDestFiles]
+
+[deleteDestFiles]
+This is tru rsync. If you delete a local file, then set this to 1, it will
+delete the file on the destination location as well.
+
+-- excludesFile.txt
+If you want to exclude any type of file or folder, it that in here, examples are
+.DS_Store
+*.tmp
+
+-- Warranties
+None, if this buggers something up for you, then sorry, but I can't help. This
+is provided as is with no warranties, you use this at your own risk (but, it's
+just a wrapper!)
